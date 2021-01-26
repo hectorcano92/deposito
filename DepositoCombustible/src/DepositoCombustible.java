@@ -69,7 +69,7 @@ public class DepositoCombustible {
      *          <code>false</code> en otro caso.
 	 */
     public boolean estaLleno(){
-	  return depNivel == depMax;
+	  return depNivel >= depMax;
     }
 
    /**
@@ -84,8 +84,9 @@ public class DepositoCombustible {
 	* @param amount 	Cantidad de combustible que añade
 	* 
 	*/
-    public void fill(double amount){
+    public double fill(double amount){
        depNivel = depNivel + amount;
+       return depNivel;
     }
 
    /**
