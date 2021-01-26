@@ -40,6 +40,12 @@ public class DepositoCombustible {
     * @return	la cantidad de combustible en el depósito
     */
     public double getDepositoNivel(){
+    	if (depNivel>depMax) {
+    		depNivel = depMax;
+    	}
+    	if (depNivel < 0 ) {
+    		depNivel = 0;
+    	}
        return depNivel;
     }
 
