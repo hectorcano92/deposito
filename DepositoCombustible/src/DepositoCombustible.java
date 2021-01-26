@@ -59,7 +59,7 @@ public class DepositoCombustible {
     *          <code>false</code> en otro caso.
 	*/
     public boolean estaVacio(){
-      return depNivel == 0;
+      return depNivel <= 0;
     }
 
     /**
